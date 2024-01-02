@@ -16,13 +16,13 @@ const UserSchema = new Schema ({
     },
     thoughts: [
         {
-            type: Schema.ObjectId,
+            type: Schema.Types.ObjectId,
             ref: 'Thought'
         }
     ],
     friends: [
         {
-            type: Schema.ObjectId,
+            type: Schema.Types.ObjectId,
             ref: 'User'
         }
     ]

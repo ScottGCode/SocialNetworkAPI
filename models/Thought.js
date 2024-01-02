@@ -1,5 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
-const formatDate = require('../utils/formatDate');
+const { formatTimestamp } = require('../utils/formatDate');
 
 const ThoughtSchema = new Schema ({
 thoughtText: {
@@ -11,7 +11,7 @@ thoughtText: {
 createdAt : {
     type: Date,
     default: Date.now,
-    get: dateVal => formatDate(dateVal)
+    get: dateVal => formatTimestamp(dateVal)
 },
 username: {
     type: String,
