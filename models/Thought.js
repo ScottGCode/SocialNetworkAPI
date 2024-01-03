@@ -21,7 +21,12 @@ userId: {
     type: String,
     required: true
 },
-reactions: [ReactionSchema]
+reactions: [
+    {
+        type: Schema.Types.ObjectId,
+        ref: 'Reaction'
+    }
+]
 },
 {
     toJSON: {
