@@ -56,7 +56,7 @@ const userController = {
         }).catch(err => res.status(400).json(err))
     },
     addFriend({ params }, res) {
-        User.findOneAndUpdate({ _id: params.userId}, {$addtoSet: {friends: params.friendId}}, { new: true, runValidators: true })
+        User.findOneAndUpdate({ _id: params.userId}, {$addToSet: {friends: params.friendId}}, { new: true, runValidators: true })
         .then(dbFriend => res.json(dbFriend))
         .catch(err => res.json(err))
     },

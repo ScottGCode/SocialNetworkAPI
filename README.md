@@ -2,12 +2,7 @@
 
 ## Description
 
-Social media startups require an application that can handle large amounts of unstructured data using a NoSQL database. This is why I have created an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. Using Express.js for routing, a MongoDB database, and the Mongoose ODM. This application also uses npm package date-fns for date formatting. Users are able to create, read, update and delete data in the application. 
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
+Social media startups require an application that can handle large amounts of unstructured data using a NoSQL database. This is why I have created an API for a social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list. Using Express.js for routing, a MongoDB database, and the Mongoose ODM. This application also uses npm package date-fns for date formatting. Users are able to create, read, update and delete data in the application including adding and deleting thoughts and reactions. This helps create fast and effecient database queries and allows a social media startup to begin acquiring a large amount of users in a short amount of time.
 
 ## Installation
 
@@ -17,19 +12,25 @@ To start the social network API server;
 2. In your code editor open the file in the integrated terminal. 
 3. Run the command `npm install` to install required dependencies. 
 4. Then type `npm start` to start the social network API server. 
-5. Test the application using Insomnia or Postman. 
+5. The server will be running on `http://localhost:3001/`. 
+6. Test the application using Insomnia or Postman. 
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+To create, read, update, and delete data follow these steps; 
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
+1. Use `http://localhost:3001/` and the `/api` endpoint to access the data in the application. 
+2. Perform a GET to `/api/users` to see all users. Perform a GET to `/api/users/:id` to get a user by id. 
+3. Perform a POST to `/api/users` to create a new user. Perform a PUT/DELETE to `/api/users/:id` to update or delete a user by id. 
+4. Access `/api/users/:userId/friends/:friendId` to POST to add a new friend to a user's friend list, or DELETE to remove a friend from a user's friend list. 
+5. Using `/api/thoughts` you can GET all thoughts, GET to get a single thought by its _id, POST to create a new thought, PUT to update a thought by its _id and DELETE to remove a thought by its _id. 
+6. Access `/api/thoughts/:thoughtId/reactions` and POST to create a reaction stored in a single thought's reactions array field. DELETE to pull and remove a reaction by the reaction's reactionId value. 
 
 ![alt text](assets/images/screenshot.png)
 
 ## Credits
 
-University of Utah Coding Bootcamp Instructor and Teaching Assistants. NPM documentation on Mongoose and date-fns. MongoDB documentation. Express.js documentation. MDN Web Docs. 
+University of Utah Coding Bootcamp Instructor and Teaching Assistants. Mongoosejs documentation. NPM documentation on date-fns. MongoDB documentation. Express.js documentation. MDN Web Docs. 
 
 ## License
 
