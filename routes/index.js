@@ -1,3 +1,4 @@
+// define routes to use /api endpoint. 
 const router = require('express').Router();
 const apiRoutes = require('./api');
 

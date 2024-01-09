@@ -1,5 +1,6 @@
 const { User } = require('../models');
 
+// define user controller 
 const userController = {
     getAllUsers(req, res) {
         User.find({}).populate({
@@ -55,6 +56,7 @@ const userController = {
             res.json(dbUser)
         }).catch(err => res.status(400).json(err))
     },
+    // add and delete friend
     addFriend({ params }, res) {
         User.findOneAndUpdate({ _id: params.userId}, {$addToSet: {friends: params.friendId}}, { new: true, runValidators: true })
         .then(dbFriend => res.json(dbFriend))

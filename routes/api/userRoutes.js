@@ -1,3 +1,4 @@
+// define User routes 
 const router = require('express').Router();
 
 const {
@@ -10,6 +11,7 @@ const {
     deleteFriend,
 } = require('../../controllers/user-controllers');
 
+// User routes 
 router.route('/').get(getAllUsers).post(createUser);
 
 router.route('/:userId').get(getUserById).put(updateUser).delete(deleteUser);

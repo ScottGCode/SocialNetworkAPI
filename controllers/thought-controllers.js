@@ -1,5 +1,6 @@
 const { Thought, User } = require('../models');
 
+// define thought controller
 const thoughtController = {
     getThoughts(req, res) {
         Thought.find({})
@@ -70,6 +71,7 @@ const thoughtController = {
             res.json(dbThought)
         }).catch(err => res.status(400).json(err))
     },
+    // reactions 
     addReaction({ params, body }, res) {
         Thought.findOneAndUpdate({ _id: params.thoughtId }, {$push: {reactions: body }}, { new: true, runValidators: true })
         .then(dbReaction => {

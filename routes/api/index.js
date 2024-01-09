@@ -1,3 +1,4 @@
+// define route endpoints for User and Thought. 
 const router = require('express').Router();
 
 const userRoutes = require('./userRoutes');

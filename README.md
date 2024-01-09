@@ -20,10 +20,15 @@ To start the social network API server;
 To create, read, update, and delete data follow these steps; 
 
 1. Use `http://localhost:3001/` and the `/api` endpoint to access the data in the application. 
+
 2. Perform a GET to `/api/users` to see all users. Perform a GET to `/api/users/:id` to get a user by id. 
+
 3. Perform a POST to `/api/users` to create a new user. Perform a PUT/DELETE to `/api/users/:id` to update or delete a user by id. 
+
 4. Access `/api/users/:userId/friends/:friendId` to POST to add a new friend to a user's friend list, or DELETE to remove a friend from a user's friend list. 
+
 5. Using `/api/thoughts` you can GET all thoughts, GET to get a single thought by its _id, POST to create a new thought, PUT to update a thought by its _id and DELETE to remove a thought by its _id. 
+
 6. Access `/api/thoughts/:thoughtId/reactions` and POST to create a reaction stored in a single thought's reactions array field. DELETE to pull and remove a reaction by the reaction's reactionId value. 
 
 ![alt text](assets/images/screenshot.png)

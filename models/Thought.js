@@ -1,7 +1,7 @@
 const { Schema, model, Types } = require('mongoose');
 const { formatTimestamp } = require('../utils/formatDate');
 
-// Reaction Schema 
+// Reaction Schema to be included as a sub document in User model 
 const ReactionSchema = new Schema({
     reactionId: {
         type: Schema.Types.ObjectId,
@@ -28,6 +28,7 @@ const ReactionSchema = new Schema({
     }
 });
 
+// define Thought model with reaction schema as a sub document 
 const ThoughtSchema = new Schema ({
 thoughtText: {
     type: String,
@@ -60,7 +61,7 @@ ThoughtSchema.virtual('reactionCount').get(function() {
     return this.reactions.length;
 })
 
-// create thought model and export 
+// create Thought model and export 
 const Thought = model ('Thought', ThoughtSchema);
 
 module.exports = Thought; 
