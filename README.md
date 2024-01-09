@@ -31,7 +31,7 @@ To create, read, update, and delete data follow these steps;
 
 6. Access `/api/thoughts/:thoughtId/reactions` and POST to create a reaction stored in a single thought's reactions array field. DELETE to pull and remove a reaction by the reaction's reactionId value. 
 
-![alt text](assets/images/screenshot.png)
+![Video Walkthrough gif](/assets/images/SocialNetworkAPI%20Video%20Walkthrough.gif)
 
 ## Credits
 
